@@ -49,14 +49,14 @@ public class BDInit extends HttpServlet {
             statement.executeUpdate("insert into usuaris values('adri','chuf')");
             statement.executeUpdate("insert into usuaris values('aleix','cusetes1719')");
             statement.executeUpdate("insert into usuaris values('silvia','unzero')");
-
-            statement.executeUpdate("create table imatges (id_imatge integer primary key, titol_imatge string, descripcio string,"
+            //out.println("Basura");
+            statement.executeUpdate("create table imatges (id_imatge integer primary key autoincrement, titol_imatge string, descripcio string,"
                     + "paraula_clau string, autor string, data_creacio string, data_pujada string, nom string)");
-           // statement.executeUpdate("insert into imatges  values(1,'exemple', 'Aixo es un exemple', 'exe','adri','01-10-2018','01-10-2018','ola')");
+            statement.executeUpdate("insert into imatges  values(null,'exemple', 'Aixo es un exemple', 'exe','adri','01-10-2018','01-10-2018','ola')");
         }
         catch(SQLException e)
         {
-          System.err.println(e.getMessage());
+          System.err.println("SQL EXCEPTGION: " + e.getMessage());
         } catch (ClassNotFoundException e) {
             System.err.println(e.getMessage());
         }   

@@ -44,17 +44,12 @@ public class BDInit extends HttpServlet {
             Statement statement = connection.createStatement();
             statement.setQueryTimeout(30);
             
-            statement.executeUpdate("drop table if exists usuaris");
             statement.executeUpdate("drop table if exists imatges");
                                 
-            statement.executeUpdate("create table usuaris (id_usuario string primary key, password string)");
-            statement.executeUpdate("insert into usuaris values('adri','chuf')");
-            statement.executeUpdate("insert into usuaris values('aleix','cusetes1719')");
-            statement.executeUpdate("insert into usuaris values('silvia','unzero')");
-            //out.println("Basura");
-            statement.executeUpdate("create table imatges (id_imatge integer primary key autoincrement, titol_imatge string, descripcio string,"
-                    + "paraula_clau string, autor string, data_creacio string, data_pujada string, nom string)");
-            statement.executeUpdate("insert into imatges  values(null,'exemple', 'Aixo es un exemple', 'exe','adri','01-10-2018','01-10-2018','ola')");
+            statement.executeUpdate("create table imatges (id_imatge integer primary key autoincrement, titol_imatge string,"
+                    + "paraula_clau string, autor string, data_creacio string)");
+            statement.executeUpdate("insert into imatges  values(null,'exemple', 'exe','adri','01-10-2018')");
+            statement.executeUpdate("insert into imatges  values(null,'exemple', 'exe','adri','01-10-2018')");
         }
         catch(SQLException e)
         {

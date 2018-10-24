@@ -11,11 +11,11 @@ package org.me.image;
  * @author aleix
  */
 public class Image {
-    private int idImag;
-    private String titulo; 
-    private String fecha;
-    private String paraulaclau; 
-    private String author; 
+    public int idImag;
+    public String titulo; 
+    public String fecha;
+    public String paraulaclau; 
+    public String author; 
     
     
     public Image(int idImag, String titulo, String fecha, String paraulaclau, String author){ 
@@ -25,6 +25,8 @@ public class Image {
         this.paraulaclau = paraulaclau; 
         this.author = author; 
     }
+    
+    public Image() {}
     
     public int GetIdImag(){
         return this.idImag;
